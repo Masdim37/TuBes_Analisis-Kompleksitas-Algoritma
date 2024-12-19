@@ -1,16 +1,16 @@
 # <h1 align="center">TUGAS BESAR ANALISIS KOMPLEKSITAS ALGORITMA (AKA)</h1>
 # <h2 align="center">Analisis perbandingan Algoritma Breadth-First Search (BFS) dan Depth-First Search (DFS) dalam penelusuran Graf</h2>
 
-## Anggota Kelompok 
+### Anggota Kelompok 
 Muhammad Dhimas Hafizh Fathurrahman - 2311102151 <br/>
-Irfan Thoriq Habibi- 2311102131 <br/>
+Irfan Thoriq Habibi - 2311102131 <br/>
 Kelas S1IF-11-04 <br/>
 Telkom University Purwokerto <br/>
 
-## Dasar Teori
+### Dasar Teori
 Traversal adalah ...
 
-## Algoritma BFS <br/>
+### Algoritma BFS <br/>
 Algoritma Breadth-First Search (BFS) atau yang disebut juga sebagai algoritma pencarian melebar adalah algoritma pencarian dan penjelajahan yang bekerja dengan mengunjungi simpul-simpul pohon atau graf secara bertingkat dari simpul awal. BFS memulai dari simpul awal dan mengunjungi semua tetangganya terlebih dahulu sebelum melanjutkan ke tingkat berikutnya.
 
 Algoritma BFS dijalankan secara iteratif dan menggunakan antrian (queue) untuk memastikan urutan pengunjungannya, sehingga memungkinkan setiap tingkat dari pohon atau graf untuk dijelajahi sepenuhnya sebelum beralih ke tingkat berikutnya. Proses ini berulang sampai semua simpul yang dapat diakses telah dijelajahi atau tidak ada lagi simpul yang dapat diakses dari antrian.
@@ -171,7 +171,7 @@ int main(){
 }
 ```
 
-## Algoritma DFS <br/>
+### Algoritma DFS <br/>
 Algoritma Depth-First Search (DFS) atau yang disebut juga sebagai algoritma pencarian mendalam adalah algoritma pencarian dan penjelajahan yang bekerja dengan mengunjungi simpul-simpul pohon atau graf secara berulang-ulang (rekursif) mulai dari simpul awal yang dipilih, dan melanjutkan eksplorasi ke tetangga terdekat yang belum dikunjungi.
 
 Algoritma DFS dijalankan secara rekursif dan menekankan pada eksplorasi mendalam dengan cara mengikuti setiap cabang pohon hingga mencapai ujungnya sebelum kembali ke simpul sebelumnya dan mengeksplorasi cabang lainnya. Proses ini berulang sampai semua simpul yang dapat diakses telah dieksplorasi atau tidak ada lagi simpul yang dapat diakses dari simpul yang telah dikunjungi.
@@ -321,7 +321,7 @@ int main(){
 }
 ```
 
-## Output
+### Output
 Misal diketahui model graf yang digunakan dalam traversal (penelusuran) BFS dan DFS pada kode diatas adalah sebagai berikut :
 
 ![Gambar_Model_Graf](https://github.com/Masdim37/TuBes_Analisis-Kompleksitas-Algoritma/blob/main/Images/Gambar_Model_Graf.jpg)
@@ -334,7 +334,7 @@ Berikut Output algoritma DFS :
 
 ![Output_BFS](https://github.com/Masdim37/TuBes_Analisis-Kompleksitas-Algoritma/blob/main/Images/Output_DFS.png)
 
-## Analisis
+### Analisis
 Berikut merupakan diagram batang perbandingan waktu eksekusi algoritma BFS dan algoritma DFS.
 
 ![Diagram_Batang_Perbandingan_BFS-DFS](https://github.com/Masdim37/TuBes_Analisis-Kompleksitas-Algoritma/blob/main/Images/Diagram_Batang_Perbandingan_BFS-DFS.jpg)
