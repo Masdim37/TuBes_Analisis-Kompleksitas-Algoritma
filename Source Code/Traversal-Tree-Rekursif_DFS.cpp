@@ -1,7 +1,11 @@
 #include <iostream>
 #include <iomanip>
 #include <queue>
+#include <chrono> //library untuk mencatat waktu eksekusi program
 using namespace std;
+
+//Mulai timer
+auto start = chrono::high_resolution_clock::now();
 
 struct Pohon{
     char data;
@@ -87,14 +91,14 @@ Pohon *insertRight(char data, Pohon *node)
 }
 
 void DFS(Pohon *node){
-    if(node == NULL){
-        return;
+    if(node == NULL){ //jika node kosong, maka
+        return; //keluar dari fungsi DFS
     }
 
-    cout << node->data << " ";
-    DFS(node->left);
+    cout << node->data << " "; //kunjungi node awal
+    DFS(node->left); //panggil kembali fungsi DFS dengan parameter node kiri dari node awal
 
-    DFS(node->right);
+    DFS(node->right); //panggil kembali fungsi DFS dengan parameter node kanan dari node awal
 }
 
 int main(){
@@ -115,6 +119,15 @@ int main(){
 
     cout << "--- Traversal DFS ---" << endl;
     DFS(root);
+    cout << endl;
+
+    //Akhiri timer
+    auto end = chrono::high_resolution_clock::now();
+
+    //Hitung waktu yang dibutuhkan
+    chrono::duration<double> duration = end - start;
+    cout << fixed << setprecision(8);
+    cout << "Waktu eksekusi = " << duration.count() << " detik" << endl;
 
     return 0;
 }

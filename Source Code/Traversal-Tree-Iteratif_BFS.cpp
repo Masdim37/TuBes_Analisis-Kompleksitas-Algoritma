@@ -1,7 +1,11 @@
 #include <iostream>
 #include <iomanip>
 #include <queue>
+#include <chrono> //library untuk mencatat waktu eksekusi program
 using namespace std;
+
+//Mulai timer
+auto start = chrono::high_resolution_clock::now();
 
 struct Pohon{
     char data;
@@ -87,12 +91,12 @@ Pohon *insertRight(char data, Pohon *node)
 }
 
 void BFS(Pohon *node){
-    if(node == NULL){
-        return;
+    if(node == NULL){ //jika node kosong, maka
+        return; //keluar dari fungsi BFS
     }
 
     queue<Pohon*> ListNode; //buat queue dengan nama ListNode
-    ListNode.push(node); //menambahkan node root kedalam queue ListNode
+    ListNode.push(node); //menambahkan node awal kedalam queue ListNode
 
     while(!ListNode.empty()){ //ketika queue tidak kosong, maka lakukan perulangan
         Pohon* current = ListNode.front(); //buat node current yang berisi elemen terdepan dalam queue
@@ -125,9 +129,18 @@ int main(){
     nodeK = insertLeft('K', nodeH); //tambah node K sebagai child kiri node H
     nodeL = insertRight('L', nodeH); //tambah node L sebagai child kanan node H
     nodeM = insertLeft('M', nodeJ); //tambah node M sebagai child kiri node J
-    
+
     cout << "--- Traversal BFS ---" << endl;
     BFS(root);
+    cout << endl;
+
+    //Akhiri timer
+    auto end = chrono::high_resolution_clock::now();
+
+    //Hitung waktu yang dibutuhkan
+    chrono::duration<double> duration = end - start;
+    cout << fixed << setprecision(8);
+    cout << "Waktu eksekusi = " << duration.count() << " detik" << endl;
 
     return 0;
 }
