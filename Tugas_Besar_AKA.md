@@ -1,11 +1,11 @@
 # <h1 align="center">TUGAS BESAR ANALISIS KOMPLEKSITAS ALGORITMA (AKA)</h1>
-# <h2 align="center">Analisis perbandingan Algoritma Breadth-First Search (BFS) dan Depth-First Search (DFS) dalam penelusuran Graf</h2>\
+# <h2 align="center">Analisis perbandingan Algoritma Breadth-First Search (BFS) dan Depth-First Search (DFS) dalam penelusuran Graf</h2>
 
 ## Anggota Kelompok 
-Muhammad Dhimas Hafizh Fathurrahman - 2311102151
-Irfan Thoriq Habibi- 2311102131
-Kelas S1IF-11-04
-Telkom University Purwokerto
+Muhammad Dhimas Hafizh Fathurrahman - 2311102151 <br/>
+Irfan Thoriq Habibi- 2311102131 <br/>
+Kelas S1IF-11-04 <br/>
+Telkom University Purwokerto <br/>
 
 ## Dasar Teori
 Traversal adalah ...
@@ -336,6 +336,7 @@ Berikut Output algoritma DFS :
 
 ## Analisis
 Berikut merupakan diagram batang perbandingan waktu eksekusi algoritma BFS dan algoritma DFS.
+
 ![Diagram_Batang_Perbandingan_BFS-DFS](https://github.com/Masdim37/TuBes_Analisis-Kompleksitas-Algoritma/blob/main/Images/Diagram_Batang_Perbandingan_BFS-DFS.jpg)
 
 Berdasarkan diagram diatas, terlihat bahwa waktu eksekusi yang dibutuhkan algoritma BFS lebih lama daripada waktu eksekusi yang dibutuhkan algoritma DFS.
