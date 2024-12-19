@@ -1,16 +1,16 @@
 # <h1 align="center">TUGAS BESAR ANALISIS KOMPLEKSITAS ALGORITMA (AKA)</h1>
-# <h1 align="center">Analisis perbandingan Algoritma Breadth-First Search (BFS) dan Depth-First Search (DFS) dalam penelusuran Graf</h1>\
+# <h2 align="center">Analisis perbandingan Algoritma Breadth-First Search (BFS) dan Depth-First Search (DFS) dalam penelusuran Graf</h2>\
 
-<p align="left">Anggota Kelompok : </p>
-<p align="left">Muhammad Dhimas Hafizh Fathurrahman - 2311102151</p>
-<p align="left">Irfan Thoriq Habibi- 2311102131</p>
-<p align="left">Kelas S1IF-11-04</p>
-<p align="left">Telkom University Purwokerto</p>
+## Anggota Kelompok 
+Muhammad Dhimas Hafizh Fathurrahman - 2311102151
+Irfan Thoriq Habibi- 2311102131
+Kelas S1IF-11-04
+Telkom University Purwokerto
 
 ## Dasar Teori
 Traversal adalah ...
 
-## A. Algoritma BFS <br/>
+## Algoritma BFS <br/>
 Algoritma Breadth-First Search (BFS) atau yang disebut juga sebagai algoritma pencarian melebar adalah algoritma pencarian dan penjelajahan yang bekerja dengan mengunjungi simpul-simpul pohon atau graf secara bertingkat dari simpul awal. BFS memulai dari simpul awal dan mengunjungi semua tetangganya terlebih dahulu sebelum melanjutkan ke tingkat berikutnya.
 
 Algoritma BFS dijalankan secara iteratif dan menggunakan antrian (queue) untuk memastikan urutan pengunjungannya, sehingga memungkinkan setiap tingkat dari pohon atau graf untuk dijelajahi sepenuhnya sebelum beralih ke tingkat berikutnya. Proses ini berulang sampai semua simpul yang dapat diakses telah dijelajahi atau tidak ada lagi simpul yang dapat diakses dari antrian.
@@ -26,7 +26,11 @@ Berikut Merupakan Program Traversal Tree Menggunakan Algoritma BFS :
 #include <iostream>
 #include <iomanip>
 #include <queue>
+#include <chrono> //library untuk mencatat waktu eksekusi program
 using namespace std;
+
+//Mulai timer
+auto start = chrono::high_resolution_clock::now();
 
 struct Pohon{
     char data;
@@ -112,12 +116,12 @@ Pohon *insertRight(char data, Pohon *node)
 }
 
 void BFS(Pohon *node){
-    if(node == NULL){
-        return;
+    if(node == NULL){ //jika node kosong, maka
+        return; //keluar dari fungsi BFS
     }
 
     queue<Pohon*> ListNode; //buat queue dengan nama ListNode
-    ListNode.push(node); //menambahkan node root kedalam queue ListNode
+    ListNode.push(node); //menambahkan node awal kedalam queue ListNode
 
     while(!ListNode.empty()){ //ketika queue tidak kosong, maka lakukan perulangan
         Pohon* current = ListNode.front(); //buat node current yang berisi elemen terdepan dalam queue
@@ -150,15 +154,24 @@ int main(){
     nodeK = insertLeft('K', nodeH); //tambah node K sebagai child kiri node H
     nodeL = insertRight('L', nodeH); //tambah node L sebagai child kanan node H
     nodeM = insertLeft('M', nodeJ); //tambah node M sebagai child kiri node J
-    
+
     cout << "--- Traversal BFS ---" << endl;
     BFS(root);
+    cout << endl;
+
+    //Akhiri timer
+    auto end = chrono::high_resolution_clock::now();
+
+    //Hitung waktu yang dibutuhkan
+    chrono::duration<double> duration = end - start;
+    cout << fixed << setprecision(8);
+    cout << "Waktu eksekusi = " << duration.count() << " detik" << endl;
 
     return 0;
 }
 ```
 
-## B. Algoritma DFS <br/>
+## Algoritma DFS <br/>
 Algoritma Depth-First Search (DFS) atau yang disebut juga sebagai algoritma pencarian mendalam adalah algoritma pencarian dan penjelajahan yang bekerja dengan mengunjungi simpul-simpul pohon atau graf secara berulang-ulang (rekursif) mulai dari simpul awal yang dipilih, dan melanjutkan eksplorasi ke tetangga terdekat yang belum dikunjungi.
 
 Algoritma DFS dijalankan secara rekursif dan menekankan pada eksplorasi mendalam dengan cara mengikuti setiap cabang pohon hingga mencapai ujungnya sebelum kembali ke simpul sebelumnya dan mengeksplorasi cabang lainnya. Proses ini berulang sampai semua simpul yang dapat diakses telah dieksplorasi atau tidak ada lagi simpul yang dapat diakses dari simpul yang telah dikunjungi.
@@ -171,12 +184,16 @@ Berikut merupakan cara kerja algoritma DFS :
 5. Ketika mencapai simpul N sedemikian sehingga semua simpul yang bertetangga dengannya telah dikunjungi, pencarian dirunut-balik (backtrack) ke simpul terakhir yang dikunjungi sebelumnya dan kumjungi simpul lain yang bertetangga dengannya.
 6. Traversal berakhir bila tidak ada lagi simpul yang belum dikunjungi yang dapat dicapai dari simpul yang telah dikunjungi.
 
-Berikut Merupakan Program Traversal Tree Menggunakan Algoritma BFS :
+Berikut Merupakan Program Traversal Tree Menggunakan Algoritma DFS :
 ```C++
 #include <iostream>
 #include <iomanip>
 #include <queue>
+#include <chrono> //library untuk mencatat waktu eksekusi program
 using namespace std;
+
+//Mulai timer
+auto start = chrono::high_resolution_clock::now();
 
 struct Pohon{
     char data;
@@ -262,14 +279,14 @@ Pohon *insertRight(char data, Pohon *node)
 }
 
 void DFS(Pohon *node){
-    if(node == NULL){
-        return;
+    if(node == NULL){ //jika node kosong, maka
+        return; //keluar dari fungsi DFS
     }
 
-    cout << node->data << " ";
-    DFS(node->left);
+    cout << node->data << " "; //kunjungi node awal
+    DFS(node->left); //panggil kembali fungsi DFS dengan parameter node kiri dari node awal
 
-    DFS(node->right);
+    DFS(node->right); //panggil kembali fungsi DFS dengan parameter node kanan dari node awal
 }
 
 int main(){
@@ -290,6 +307,15 @@ int main(){
 
     cout << "--- Traversal DFS ---" << endl;
     DFS(root);
+    cout << endl;
+
+    //Akhiri timer
+    auto end = chrono::high_resolution_clock::now();
+
+    //Hitung waktu yang dibutuhkan
+    chrono::duration<double> duration = end - start;
+    cout << fixed << setprecision(8);
+    cout << "Waktu eksekusi = " << duration.count() << " detik" << endl;
 
     return 0;
 }
@@ -297,19 +323,22 @@ int main(){
 
 ## Output
 Misal diketahui model graf yang digunakan dalam traversal (penelusuran) BFS dan DFS pada kode diatas adalah sebagai berikut :
+
 ![Gambar_Model_Graf](https://github.com/Masdim37/TuBes_Analisis-Kompleksitas-Algoritma/blob/main/Images/Gambar_Model_Graf.jpg)
 
 Berikut Output algoritma BFS :
+
 ![Output_BFS](https://github.com/Masdim37/TuBes_Analisis-Kompleksitas-Algoritma/blob/main/Images/Output_BFS.png)
 
 Berikut Output algoritma DFS :
+
 ![Output_BFS](https://github.com/Masdim37/TuBes_Analisis-Kompleksitas-Algoritma/blob/main/Images/Output_DFS.png)
 
 ## Analisis
 Berikut merupakan diagram batang perbandingan waktu eksekusi algoritma BFS dan algoritma DFS.
-![Diagram_Batang_Perbandingan_BFS-DFS](https://github.com/Masdim37/TuBes_Analisis-Kompleksitas-Algoritma/blob/main/Images/ODiagram_Batang_Perbandingan_BFS-DFS.jpg)
+![Diagram_Batang_Perbandingan_BFS-DFS](https://github.com/Masdim37/TuBes_Analisis-Kompleksitas-Algoritma/blob/main/Images/Diagram_Batang_Perbandingan_BFS-DFS.jpg)
 
-Berdasrkan diagram diatas, terlihat bahwa waktu eksekusi yang dibutuhkan algoritma BFS lebih lama daripada waktu eksekusi yang dibutuhkan algoritma DFS.
+Berdasarkan diagram diatas, terlihat bahwa waktu eksekusi yang dibutuhkan algoritma BFS lebih lama daripada waktu eksekusi yang dibutuhkan algoritma DFS.
 
 Hal ini karena algoritma BFS menggunakan antrian (queue) yang mengimplementasikan iterasi untuk menelusuri simpul-simpul pohon atau graf secara bertingkat. Setiap simpul pada setiap tingkat harus dikunjungi sebelum melanjutkan ke tingkat berikutnya. Proses ini memerlukan waktu yang lebih lama karena BFS tidak hanya menelusuri cabang-cabang mendalam, tetapi juga mengunjungi simpul-simpul secara berturut-turut dari tingkat terendah ke tingkat tertinggi, yang memerlukan lebih banyak langkah dan iterasi.
 
