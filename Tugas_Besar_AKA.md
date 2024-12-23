@@ -7,8 +7,8 @@ Irfan Thoriq Habibi - 2311102131 <br/>
 Kelas S1IF-11-04 <br/>
 Telkom University Purwokerto <br/>
 
-### Dasar Teori
-Traversal adalah ...
+### Traversal Graf
+Traversal (penelusuran) graf atau tree adalah proses mengunjungi setiap simpul (node) dalam suatu pohon atau graf secara sistematis untuk mengetahui struktur dari graf tersebut. Terdapat 2 algoritma yang biasanya digunakan dalam traversal graf, yaitu algoritma BFS dan algoritma DFS. 
 
 ### Algoritma BFS <br/>
 Algoritma Breadth-First Search (BFS) atau yang disebut juga sebagai algoritma pencarian melebar adalah algoritma pencarian dan penjelajahan yang bekerja dengan mengunjungi simpul-simpul pohon atau graf secara bertingkat dari simpul awal. BFS memulai dari simpul awal dan mengunjungi semua tetangganya terlebih dahulu sebelum melanjutkan ke tingkat berikutnya.
@@ -322,7 +322,7 @@ int main(){
 ```
 
 ### Output
-Misal diketahui model graf yang digunakan dalam traversal (penelusuran) BFS dan DFS pada kode diatas adalah sebagai berikut :
+Diketahui model graf yang digunakan dalam traversal (penelusuran) menggunakan algoritma BFS dan DFS pada kode adalah sebagai berikut :
 
 ![Gambar_Model_Graf](https://github.com/Masdim37/TuBes_Analisis-Kompleksitas-Algoritma/blob/main/Images/Gambar_Model_Graf.jpg)
 
@@ -337,7 +337,7 @@ Berikut Output algoritma DFS :
 ### Analisis
 Berikut merupakan diagram batang perbandingan waktu eksekusi algoritma BFS dan algoritma DFS.
 
-![Diagram_Batang_Perbandingan_BFS-DFS](https://github.com/Masdim37/TuBes_Analisis-Kompleksitas-Algoritma/blob/main/Images/Diagram_Batang_Perbandingan_BFS-DFS.jpg)
+![Diagram_Batang_Perbandingan_BFS-DFS](https://github.com/Masdim37/TuBes_Analisis-Kompleksitas-Algoritma/blob/main/Images/Diagram_Batang_Perbandingan_BFS-DFS.png)
 
 Berdasarkan diagram diatas, terlihat bahwa waktu eksekusi yang dibutuhkan algoritma BFS lebih lama daripada waktu eksekusi yang dibutuhkan algoritma DFS.
 
