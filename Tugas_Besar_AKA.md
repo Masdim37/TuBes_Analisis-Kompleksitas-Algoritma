@@ -346,3 +346,6 @@ Hal ini karena algoritma BFS menggunakan antrian (queue) yang mengimplementasika
 Di sisi lain, algoritma DFS menggunakan rekursi, yang memungkinkan eksplorasi mendalam dari simpul-simpul pohon atau graf tanpa harus mengikuti urutan tingkat per tingkat. DFS lebih cepat dalam mengeksplorasi cabang-cabang tertentu karena ia tidak terhambat oleh urutan tingkat ke tingkat. Namun algoritma DFS memerlukan lebih banyak penggunaan memori karena dijalankan secara rekursif.
 
 Algoritma BFS maupun DFS memiliki kompleksitas waktu yang sama yaitu Θ(n), karena setiap node yang ditelusur hanya diproses sebanyak 1x. Sehingga untuk n buah node, total operasi yang dilakukan adalah sebanyak n kali. Hal ini juga berlaku dalam best case dan worst case, dikarenakan traversal atau penelusuran yang dilakukan mencakup semua node yang ada didalam graf.
+
+### Referensi 
+Inggiantowi, H. (2008). “Perbandingan Algoritma Penelusuran Depth First Search dan Breadth First Search pada Graf serta Aplikasinya”. Program Studi Teknik Informatika, Sekolah Teknik Elektro dan Informatika, Institut Teknologi Bandung.
