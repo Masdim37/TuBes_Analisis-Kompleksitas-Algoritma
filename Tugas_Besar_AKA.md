@@ -7,8 +7,12 @@ Irfan Thoriq Habibi - 2311102131 <br/>
 Kelas S1IF-11-04 <br/>
 Telkom University Purwokerto <br/>
 
-### Traversal Graf
-Traversal (penelusuran) graf atau tree adalah proses mengunjungi setiap simpul (node) dalam suatu pohon atau graf secara sistematis untuk mengetahui struktur dari graf tersebut. Terdapat 2 algoritma yang biasanya digunakan dalam traversal graf, yaitu algoritma BFS dan algoritma DFS. 
+### Study Case
+Traversal (penelusuran) adalah proses mengunjungi setiap simpul (node) dalam suatu pohon atau graf secara sistematis untuk mengetahui struktur dari graf tersebut. Terdapat 2 algoritma yang digunakan dalam traversal graf, yaitu BFS dan DFS. 
+
+Algoritma Breadth-First Search (BFS) dan Algoritma Depth-First Search (DFS) adalah dua metode yang umum digunakan dalam penelusuran graf, masing-masing menggunakan pendekatan yang berbeda. Pada dasarnya, BFS menggunakan struktur data antrian (queue) untuk menjelajahi simpul secara level (Iteratif), dimulai dari simpul awal dan menambahkan semua tetangga yang belum dikunjungi ke queue. Di sisi lain, DFS mengunjungi simpul-simpul pohon atau graf secara berulang-ulang (Rekursif) mulai dari simpul awal yang dipilih, dan melanjutkan eksplorasi ke tetangga atau node terdekat yang belum dikunjungi.
+
+Pada study case ini, dilakukan analisis perbandingan waktu eksekusi algoritma BFS dan DFS untuk melakukan traversal tree terhadap model graf atau pohon yang telah ditentukan.
 
 ### Algoritma BFS <br/>
 Algoritma Breadth-First Search (BFS) atau yang disebut juga sebagai algoritma pencarian melebar adalah algoritma pencarian dan penjelajahan yang bekerja dengan mengunjungi simpul-simpul pohon atau graf secara bertingkat dari simpul awal. BFS memulai dari simpul awal dan mengunjungi semua tetangganya terlebih dahulu sebelum melanjutkan ke tingkat berikutnya.
