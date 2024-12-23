@@ -326,7 +326,7 @@ int main(){
 ```
 
 ### Output
-Diketahui model graf yang digunakan dalam traversal (penelusuran) menggunakan algoritma BFS dan DFS pada kode adalah sebagai berikut :
+Diketahui model graf yang digunakan dalam traversal (penelusuran) menggunakan algoritma BFS dan DFS pada kedua kode diatas adalah sebagai berikut :
 
 ![Gambar_Model_Graf](https://github.com/Masdim37/TuBes_Analisis-Kompleksitas-Algoritma/blob/main/Images/Gambar_Model_Graf.jpg)
 
@@ -339,7 +339,7 @@ Berikut Output algoritma DFS :
 ![Output_BFS](https://github.com/Masdim37/TuBes_Analisis-Kompleksitas-Algoritma/blob/main/Images/Output_DFS.png)
 
 ### Analisis
-Berikut merupakan diagram batang perbandingan waktu eksekusi algoritma BFS dan algoritma DFS.
+Berikut merupakan diagram batang perbandingan waktu eksekusi algoritma BFS dan algoritma DFS dalam satuan mikro detik.
 
 ![Diagram_Batang_Perbandingan_BFS-DFS](https://github.com/Masdim37/TuBes_Analisis-Kompleksitas-Algoritma/blob/main/Images/Diagram_Batang_Perbandingan_BFS-DFS.jpg)
 
@@ -347,9 +347,14 @@ Berdasarkan diagram diatas, terlihat bahwa waktu eksekusi yang dibutuhkan algori
 
 Hal ini karena algoritma BFS menggunakan antrian (queue) yang mengimplementasikan iterasi untuk menelusuri simpul-simpul pohon atau graf secara bertingkat. Setiap simpul pada setiap tingkat harus dikunjungi sebelum melanjutkan ke tingkat berikutnya. Proses ini memerlukan waktu yang lebih lama karena BFS tidak hanya menelusuri cabang-cabang mendalam, tetapi juga mengunjungi simpul-simpul secara berturut-turut dari tingkat terendah ke tingkat tertinggi, yang memerlukan lebih banyak langkah dan iterasi.
 
-Di sisi lain, algoritma DFS menggunakan rekursi, yang memungkinkan eksplorasi mendalam dari simpul-simpul pohon atau graf tanpa harus mengikuti urutan tingkat per tingkat. DFS lebih cepat dalam mengeksplorasi cabang-cabang tertentu karena ia tidak terhambat oleh urutan tingkat ke tingkat. Namun algoritma DFS memerlukan lebih banyak penggunaan memori karena dijalankan secara rekursif.
+Di sisi lain, algoritma DFS menggunakan rekursi, yang memungkinkan eksplorasi mendalam dari simpul-simpul pohon atau graf tanpa harus mengikuti urutan tingkat per tingkat. DFS lebih cepat dalam mengeksplorasi model graf tertentu karena ia tidak terhambat oleh urutan tingkat ke tingkat.
 
 Algoritma BFS maupun DFS memiliki kompleksitas waktu yang sama yaitu Θ(n), karena setiap node yang ditelusur hanya diproses sebanyak 1x. Sehingga untuk n buah node, total operasi yang dilakukan adalah sebanyak n kali. Hal ini juga berlaku dalam best case dan worst case, dikarenakan traversal atau penelusuran yang dilakukan mencakup semua node yang ada didalam graf.
+
+### Kesimpulan
+Algoritma BFS & DFS memiliki fungsi yang sama dalam hal penelusuran graf, namun memiliki cara kerja yang berbeda. BFS bekerja dengan mengunjungi setiap simpul secara bertingkat dengan mengimplementasikan metode iteratif, sedangkan DFS bekerja dengan mengunjungi simpul secara mendalam dengan mengimplementasikan metode rekursif. 
+
+Dalam hal efisiensi, BFS lebih cocok digunakan untuk graf yang pendek dan tidak memiliki banyak cabang, karena BFS mengimplementasikan queue untuk menyimpan hasil penelusuran sehingga semakin panjang dan semakin banyak cabang, maka penggunaan memori akan semakin tinggi. DFS lebih cocok digunakan untuk graf yang panjang, karena DFS bekerja dengan menelusuri setiap simpul secara mendalam. Namun, semakin panjang graf yang ditelusur akan berdampak pada waktu eksekusi yang diperlukan.
 
 ### Referensi 
 Inggiantowi, H. (2008). “Perbandingan Algoritma Penelusuran Depth First Search dan Breadth First Search pada Graf serta Aplikasinya”. Program Studi Teknik Informatika, Sekolah Teknik Elektro dan Informatika, Institut Teknologi Bandung.
