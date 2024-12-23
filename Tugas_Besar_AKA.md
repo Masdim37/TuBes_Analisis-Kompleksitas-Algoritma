@@ -337,7 +337,7 @@ Berikut Output algoritma DFS :
 ### Analisis
 Berikut merupakan diagram batang perbandingan waktu eksekusi algoritma BFS dan algoritma DFS.
 
-![Diagram_Batang_Perbandingan_BFS-DFS](https://github.com/Masdim37/TuBes_Analisis-Kompleksitas-Algoritma/blob/main/Images/Diagram_Batang_Perbandingan_BFS-DFS.png)
+![Diagram_Batang_Perbandingan_BFS-DFS](https://github.com/Masdim37/TuBes_Analisis-Kompleksitas-Algoritma/blob/main/Images/Diagram_Batang_Perbandingan_BFS-DFS.jpg)
 
 Berdasarkan diagram diatas, terlihat bahwa waktu eksekusi yang dibutuhkan algoritma BFS lebih lama daripada waktu eksekusi yang dibutuhkan algoritma DFS.
 
